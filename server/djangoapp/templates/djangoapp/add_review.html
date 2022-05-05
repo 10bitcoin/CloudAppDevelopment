@@ -7,7 +7,8 @@
         <h4><i>for {{dealer.full_name}}</i></h4>
         <br>
         <!--review form -->
-        <form action="/djangoapp/dealer/{{dealer.id}}/add_review/" method="post">
+        #<form action="/djangoapp/dealer/{{dealer.id}}/add_review/" method="post">
+        <form action="{% url 'djangoapp:add_review' dealer.id%}" method="post">    
             {% csrf_token %}
             <div class="form-group">
                 <label for="content"><b>Enter review content:</b></label>
