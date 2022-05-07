@@ -20,13 +20,11 @@ spec:
         run: dealership
     spec:
       containers:
-      - image: srokholt/dealership:latest
+      - image: us.icr.io/djangoserver-space/dealership:latest
         imagePullPolicy: Always
         name: dealership
         ports:
         - containerPort: 8000
           protocol: TCP
       restartPolicy: Always
-      imagePullSecrets:
-      - name: docker-hub
   replicas: 1
