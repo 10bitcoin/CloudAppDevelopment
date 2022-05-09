@@ -29,6 +29,7 @@ DEBUG = True
 APPEND_SLASH = True
 
 ALLOWED_HOSTS = ['vhui77.us-south.cf.appdomain.cloud','localhost']
+CSRF_TRUSTED_ORIGINS = [‘https://vhui77-8000.theiadocker-2-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/’]
 
 
 # Application definition
