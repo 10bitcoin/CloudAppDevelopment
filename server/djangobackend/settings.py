@@ -28,8 +28,8 @@ DEBUG = True
 
 APPEND_SLASH = True
 
-ALLOWED_HOSTS = ['vhui77.us-south.cf.appdomain.cloud','localhost']
-CSRF_TRUSTED_ORIGINS = [‘https://vhui77-8000.theiadocker-2-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/’]
+ALLOWED_HOSTS = ['vhui77.us-south.cf.appdomain.cloud','localhost','vhui77-8000.theiadocker-2-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai']
+CSRF_TRUSTED_ORIGINS = ['https://vhui77-8000.theiadocker-3-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai','https://vhui77.us-south.cf.appdomain.cloud','https://127.0.0.1']
 
 
 # Application definition
@@ -45,10 +45,10 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.common.CommonMiddleware',  
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
